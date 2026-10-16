@@ -106,7 +106,7 @@ Flask uses SQLite by default and creates its database tables at startup. Optiona
 
 ```text
 DATABASE_URL=sqlite:///slice_storm.db
-JWT_SECRET_KEY=replace-this-with-a-long-random-secret
+JWT_SECRET_KEY=Nothing
 PORT=5000
 ```
 
