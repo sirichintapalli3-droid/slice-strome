@@ -4,6 +4,7 @@ import WelcomeBranding from './components/WelcomeBranding.jsx';
 import { playFireworks, playSlice, playSound } from './gameAudio.js';
 import { advanceCampaignProgress, calculateFruitScore, intersectsSegment, stepFruit } from './gameLogic.js';
 import LEVELS from '../../level_config.json';
+import API_URL from './api.js';
 
 const FRUITS = [
   { name: 'Apple', kind: 'apple', points: 10, radius: 25, color: '#bf3032' },
@@ -82,7 +83,7 @@ function readStoredUser() {
 
 async function api(path, options = {}) {
   const token = localStorage.getItem('sliceStormToken');
-  const response = await fetch(path, {
+  const response = await fetch(`${API_URL}${path}`, {
     ...options,
     headers: {
       'Content-Type': 'application/json',

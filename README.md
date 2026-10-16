@@ -102,7 +102,7 @@ On macOS or Linux, use `npm run build`. This writes the generated app to `client
 
 ## Configuration
 
-Flask uses SQLite by default and creates its database tables at startup. Optional environment variables:
+Flask uses SQLite by default for local development and creates its database tables at startup. Set a persistent PostgreSQL `DATABASE_URL` for deployment. Optional environment variables:
 
 ```text
 DATABASE_URL=sqlite:///slice_storm.db
@@ -111,6 +111,15 @@ PORT=5000
 ```
 
 The built-in JWT secret is for local development only. Set a private `JWT_SECRET_KEY` before deployment.
+
+## Deploying on Vercel
+
+The root `app.py` serves the Flask API and the built React app. Vercel builds the frontend with `npm run build`; the Python runtime serves the Flask app. Local SQLite is not persistent on Vercel, so connect a hosted PostgreSQL database such as Neon and set these variables in the Vercel project settings:
+
+- `DATABASE_URL` — the PostgreSQL connection string from Neon
+- `JWT_SECRET_KEY` — a long, randomly generated secret
+
+The frontend calls the API on the same deployment by default. Leave `VITE_API_URL` unset unless the API is hosted separately. Never commit `.env` files or database credentials.
 
 ## API Routes
 

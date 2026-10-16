@@ -4,6 +4,7 @@ client/node_modules
 server/data/store.json
 .env
 client/dist
+.vercel/
 .venv/
 instance/
 __pycache__/

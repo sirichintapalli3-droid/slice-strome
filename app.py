@@ -11,9 +11,23 @@ from sqlalchemy import inspect, text
 from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__, static_folder='static')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///slice_storm.db')
+database_url = os.getenv('DATABASE_URL')
+if not database_url:
+    if os.getenv('VERCEL'):
+        raise RuntimeError('Set DATABASE_URL to a persistent PostgreSQL database in the Vercel project environment.')
+    database_url = 'sqlite:///slice_storm.db'
+if database_url.startswith('postgres://'):
+    database_url = 'postgresql+psycopg://' + database_url.removeprefix('postgres://')
+elif database_url.startswith('postgresql://'):
+    database_url = 'postgresql+psycopg://' + database_url.removeprefix('postgresql://')
+app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'slice-storm-secret-key')
+jwt_secret_key = os.getenv('JWT_SECRET_KEY')
+if not jwt_secret_key:
+    if os.getenv('VERCEL'):
+        raise RuntimeError('Set JWT_SECRET_KEY in the Vercel project environment.')
+    jwt_secret_key = 'slice-storm-secret-key'
+app.config['JWT_SECRET_KEY'] = jwt_secret_key
 with open(os.path.join(os.path.dirname(__file__), 'level_config.json'), encoding='utf-8') as level_file:
     LEVEL_CONFIG = json.load(level_file)
 MAX_LEVEL = len(LEVEL_CONFIG)
@@ -123,6 +137,11 @@ def index():
 @app.get('/assets/<path:filename>')
 def client_asset(filename):
     return send_from_directory(os.path.join(app.root_path, 'client', 'dist', 'assets'), filename)
+
+
+@app.get('/<path:filename>')
+def client_public_asset(filename):
+    return send_from_directory(os.path.join(app.root_path, 'client', 'dist'), filename)
 
 
 @app.get('/api/health')
