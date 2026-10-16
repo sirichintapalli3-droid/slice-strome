@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="shine" cx="30%" cy="20%" r="75%"><stop stop-color="#fff" stop-opacity=".82"/><stop offset=".25" stop-color="#fff" stop-opacity=".2"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="apple" x2="1" y2="1"><stop stop-color="#ff7861"/><stop offset=".42" stop-color="#d93635"/><stop offset="1" stop-color="#701a24"/></linearGradient>
+    <linearGradient id="orange" x2=".9" y2="1"><stop stop-color="#ffd071"/><stop offset=".36" stop-color="#ff9c27"/><stop offset="1" stop-color="#b84e17"/></linearGradient>
+    <linearGradient id="banana" x2=".8" y2="1"><stop stop-color="#fff09b"/><stop offset=".42" stop-color="#f5cd45"/><stop offset="1" stop-color="#b98422"/></linearGradient>
+    <linearGradient id="melon" x2=".9" y2="1"><stop stop-color="#82bd55"/><stop offset=".45" stop-color="#347b3c"/><stop offset="1" stop-color="#123e2d"/></linearGradient>
+    <linearGradient id="kiwi" x2=".9" y2="1"><stop stop-color="#d5c17b"/><stop offset=".5" stop-color="#96713b"/><stop offset="1" stop-color="#57412b"/></linearGradient>
+    <linearGradient id="pine" x2=".8" y2="1"><stop stop-color="#ffe17a"/><stop offset=".45" stop-color="#d5a52e"/><stop offset="1" stop-color="#8e5a20"/></linearGradient>
+    <linearGradient id="berry" x2=".8" y2="1"><stop stop-color="#ff7770"/><stop offset=".4" stop-color="#e52e43"/><stop offset="1" stop-color="#82182f"/></linearGradient>
+    <linearGradient id="blue" x2=".8" y2="1"><stop stop-color="#a5bce5"/><stop offset=".38" stop-color="#536c9d"/><stop offset="1" stop-color="#202d4a"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <symbol id="fruit-apple" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="111" rx="35" ry="8" fill="#000" opacity=".22" filter="url(#shadow)"/><path d="M65 34c-9-14-3-23 3-29 4 12 3 21-3 29Z" fill="#694522"/><path d="M66 35c9-11 19-11 27-9-7 10-16 14-27 9Z" fill="#55904a" stroke="#33633d" stroke-width="2"/><path d="M64 42c-14-12-43-8-48 17-8 39 18 62 48 56 30 6 56-17 48-56-5-25-34-29-48-17Z" fill="url(#apple)" stroke="#641d25" stroke-width="3"/><path d="M64 42c-7 5-9 10-9 17m9-17c7 5 9 10 9 17" fill="none" stroke="#a8222c" stroke-width="3"/><ellipse cx="44" cy="56" rx="28" ry="38" fill="url(#shine)"/><path d="M30 77c3 12 8 19 16 23" fill="none" stroke="#ffb0a0" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="fruit-orange" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="111" rx="34" ry="8" fill="#000" opacity=".2" filter="url(#shadow)"/><path d="M64 29c1-10 7-15 15-16-1 10-6 15-15 16Z" fill="#47763c"/><circle cx="64" cy="68" r="48" fill="url(#orange)" stroke="#a84c18" stroke-width="3"/><path d="M64 20c-7 3-10 7-11 12 8-2 13-2 22 0-2-6-5-10-11-12Z" fill="#71913d"/><circle cx="64" cy="68" r="44" fill="url(#shine)"/><g fill="#ffd982" opacity=".55"><circle cx="35" cy="54" r="1.4"/><circle cx="48" cy="35" r="1.2"/><circle cx="85" cy="43" r="1.5"/><circle cx="93" cy="70" r="1.3"/><circle cx="42" cy="87" r="1.4"/><circle cx="71" cy="97" r="1.2"/></g>
+  </symbol>
+  <symbol id="fruit-banana" viewBox="0 0 128 128">
+    <ellipse cx="66" cy="106" rx="42" ry="7" fill="#000" opacity=".2" filter="url(#shadow)"/><path d="M20 36c13 35 34 56 68 49 12-2 20-10 25-21-4 30-22 47-49 47-30 0-52-24-59-66-1-7 6-12 15-9Z" fill="url(#banana)" stroke="#a77820" stroke-width="4"/><path d="M20 36c6 3 10 6 14 11M108 64l6-1" fill="none" stroke="#79541f" stroke-width="7" stroke-linecap="round"/><path d="M29 44c16 27 36 40 63 34" fill="none" stroke="#fff4b5" stroke-width="5" stroke-linecap="round" opacity=".72"/><path d="M39 82c17 12 35 15 52 8" fill="none" stroke="#a57625" stroke-opacity=".28" stroke-width="3"/>
+  </symbol>
+  <symbol id="fruit-watermelon" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="109" rx="40" ry="9" fill="#000" opacity=".22" filter="url(#shadow)"/><circle cx="64" cy="63" r="49" fill="url(#melon)" stroke="#123e2b" stroke-width="4"/><path d="M43 19c-15 20-22 49-15 74M80 16c-13 24-16 58-7 94M101 35c-11 17-14 43-8 61" fill="none" stroke="#a5d265" stroke-opacity=".72" stroke-width="8" stroke-linecap="round"/><circle cx="64" cy="63" r="46" fill="url(#shine)"/><path d="M33 89c17 16 42 22 62 10" fill="none" stroke="#c4ec84" stroke-opacity=".28" stroke-width="3"/>
+  </symbol>
+  <symbol id="fruit-kiwi" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="109" rx="38" ry="8" fill="#000" opacity=".23" filter="url(#shadow)"/><circle cx="64" cy="64" r="48" fill="url(#kiwi)" stroke="#4d3825" stroke-width="3"/><path d="M28 48c8-20 24-31 43-32" fill="none" stroke="#f0d99b" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/><g fill="#56401e"><ellipse cx="64" cy="32" rx="2" ry="4"/><ellipse cx="84" cy="39" rx="2" ry="4" transform="rotate(35 84 39)"/><ellipse cx="96" cy="59" rx="2" ry="4" transform="rotate(70 96 59)"/><ellipse cx="91" cy="82" rx="2" ry="4" transform="rotate(110 91 82)"/><ellipse cx="72" cy="96" rx="2" ry="4" transform="rotate(160 72 96)"/><ellipse cx="48" cy="91" rx="2" ry="4" transform="rotate(205 48 91)"/><ellipse cx="33" cy="73" rx="2" ry="4" transform="rotate(250 33 73)"/><ellipse cx="39" cy="50" rx="2" ry="4" transform="rotate(300 39 50)"/></g><path d="M36 54c5-21 22-33 40-35" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="fruit-pineapple" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="111" rx="31" ry="7" fill="#000" opacity=".23" filter="url(#shadow)"/><path d="M63 48C48 32 42 19 46 7c12 6 17 16 19 33C69 20 80 10 95 8c-2 17-11 31-25 42 19-16 29-17 39-13-8 17-22 26-40 29" fill="#457543" stroke="#284e36" stroke-width="3"/><path d="M64 34c-24 0-39 21-37 51 2 24 17 36 37 36s35-12 37-36c2-30-13-51-37-51Z" fill="url(#pine)" stroke="#80521e" stroke-width="3"/><path d="m37 49 53 56M31 68l43 44M45 38l54 58M90 43 39 101M99 59 53 114M97 83 70 116" stroke="#8d5e20" stroke-opacity=".6" stroke-width="2"/><ellipse cx="49" cy="61" rx="22" ry="35" fill="url(#shine)"/>
+  </symbol>
+  <symbol id="fruit-strawberry" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="108" rx="30" ry="8" fill="#000" opacity=".22" filter="url(#shadow)"/><path d="M64 38C39 22 19 39 22 64c3 29 27 51 42 61 15-10 39-32 42-61 3-25-17-42-42-26Z" fill="url(#berry)" stroke="#7f1d30" stroke-width="3"/><path d="M64 39c-12-17-27-19-37-13 4 13 17 20 37 20 20 0 33-7 37-20-10-6-25-4-37 13Z" fill="#4e8743" stroke="#2f5b36" stroke-width="2"/><g fill="#ffdf8b"><ellipse cx="43" cy="52" rx="2" ry="3"/><ellipse cx="68" cy="53" rx="2" ry="3"/><ellipse cx="85" cy="64" rx="2" ry="3"/><ellipse cx="37" cy="75" rx="2" ry="3"/><ellipse cx="58" cy="73" rx="2" ry="3"/><ellipse cx="78" cy="83" rx="2" ry="3"/><ellipse cx="49" cy="94" rx="2" ry="3"/><ellipse cx="68" cy="101" rx="2" ry="3"/></g><path d="M39 46c-8 17 0 34 10 45" fill="none" stroke="#ffc2a5" stroke-opacity=".42" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="fruit-blueberry" viewBox="0 0 128 128">
+    <ellipse cx="64" cy="107" rx="32" ry="8" fill="#000" opacity=".24" filter="url(#shadow)"/><circle cx="64" cy="66" r="45" fill="url(#blue)" stroke="#26334d" stroke-width="4"/><path d="m64 30 6 10 12-2-4 11 8 8-12 2-6 10-7-10-12-2 8-8-4-11 12 2Z" fill="#273650" opacity=".85"/><ellipse cx="47" cy="48" rx="22" ry="27" fill="url(#shine)"/><path d="M36 75c3 14 11 22 21 25" fill="none" stroke="#c6d4eb" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+</svg>

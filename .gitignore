@@ -1,0 +1,13 @@
+node_modules
+server/node_modules
+client/node_modules
+server/data/store.json
+.env
+client/dist
+.venv/
+instance/
+__pycache__/
+*.pyc
+slice_storm.db
+.DS_Store
+npm-debug.log*
