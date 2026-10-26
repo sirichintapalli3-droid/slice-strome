@@ -34,6 +34,8 @@ docs/                             Project documentation
 README.md                         Quick start and project summary
 package.json                      Root development and build commands
 vercel.json                       Vercel build and function settings
+app.py                            Vercel entry point for the Flask app
+requirements.txt                  Vercel Python dependency entry point
 ```
 
 ## Main features

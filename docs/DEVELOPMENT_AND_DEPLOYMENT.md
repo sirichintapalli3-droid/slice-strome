@@ -62,7 +62,7 @@ Vite writes the production frontend to `frontend/client/dist/`. Flask serves tha
 
 ## Vercel deployment
 
-The repository root `vercel.json` builds the React frontend and configures `backend/app.py` as the Python function. In Vercel project settings:
+The root `app.py` exposes the Flask application implemented in `backend/app.py`. The root `requirements.txt` includes `backend/requirements.txt`, and `vercel.json` builds the React frontend and configures the Python function. In Vercel project settings:
 
 1. Set `DATABASE_URL` to a persistent PostgreSQL connection string.
 2. Set `JWT_SECRET_KEY` to a private random secret.

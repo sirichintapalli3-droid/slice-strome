@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
   "functions": {
-    "backend/app.py": {
+    "app.py": {
       "includeFiles": "{frontend/client/dist/**,backend/*.json}"
     }
   }

@@ -27,6 +27,8 @@ Detailed guides: [Project Overview](docs/PROJECT_OVERVIEW.md), [Development and 
 ├── package-lock.json        # Root npm dependency lockfile
 ├── docs/                    # Project overview, setup, and API documentation
 ├── vercel.json              # Vercel build and Python function configuration
+├── app.py                   # Vercel entry point for the Flask app
+├── requirements.txt         # Root Python dependency entry for Vercel
 └── README.md                # This project and operating guide
 ```
 
