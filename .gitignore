@@ -1,12 +1,11 @@
 node_modules
-server/node_modules
-client/node_modules
-server/data/store.json
+frontend/client/node_modules
 .env
-client/dist
+frontend/client/dist
 .vercel/
 .venv/
 instance/
+backend/instance/
 __pycache__/
 *.pyc
 slice_storm.db

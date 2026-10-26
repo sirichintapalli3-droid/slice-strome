@@ -1,81 +1,65 @@
 # SLICE STORM
 
-SLICE STORM is a browser fruit-slicing arcade game with a dark, restrained arcade interface. Sign in or play locally, choose Classic or Arcade mode, slice fruit with a mouse or touch swipe, complete level targets, avoid bombs, and compare scores on the leaderboard.
+SLICE STORM is a browser based fruit slicing game with player accounts, a level campaign, scoreboards, live play, gem rewards, and a house construction feature. React renders the game and dashboard. A Flask API handles accounts, game results, campaign progress, rewards, and saved player data.
 
-## Gameplay
+Detailed guides: [Project Overview](docs/PROJECT_OVERVIEW.md), [Development and Deployment](docs/DEVELOPMENT_AND_DEPLOYMENT.md), and [API Reference](docs/API_REFERENCE.md).
 
-- Start a round from the home screen, then press **PLAY NOW** on the ready screen.
-- Slice fruit by clicking it or dragging across it. Consecutive cuts add a capped score multiplier, with an additional multiplier in Arcade mode.
-- Missing fruit costs a life. Hitting a bomb ends the round.
-- Every level has a target shown above the game board. Level 1 asks for 5 fruit slices; each level adds 2 to the target.
-- Completing a target pauses the game and displays a celebration with animated fireworks and a short firework sound. Choose **GO TO LEVEL** to continue; levels do not advance automatically.
-- The campaign ends at Level 20 with a champion screen.
-- If the player loses, **RETRY LEVEL** restarts at that level and retains its slice-target progress. Lives and round score reset for the retry.
-- Difficulty rises by level: fruit and bomb movement speeds increase, spawns become more frequent, and bomb probability rises gradually. These increases are capped.
-- The Game Over screen reports run score, campaign progress, and the current level retry option.
-
-## Features
-
-- React game UI with mouse and touch controls
-- Fruit slicing, score, combo multipliers, lives, bombs, particles, and swipe effects
-- Twenty-level campaign, escalating targets, explicit next-level confirmation, and same-level retries
-- Classic and Arcade modes
-- Restrained dark-green visual system across the landing page, dashboard, gameplay, profile, and leaderboard
-- Login and registration, player profile, game history, statistics, and leaderboards
-- Browser-generated start, slice, bomb, level-up, and firework sounds with a sound toggle
-- Responsive home screen, HUD, level target, game board, and campaign completion screens
-- SQLite database created automatically for local use
-- Expired login sessions are cleared; fruit IDs have a fallback for browsers without `crypto.randomUUID()`
-
-## Technology
-
-- **Frontend:** React 19 and Vite
-- **Backend:** Python 3 and Flask
-- **Database:** SQLite with Flask-SQLAlchemy
-- **Authentication:** Flask-JWT-Extended and Werkzeug password hashing
-- **Audio:** Web Audio API; sound effects are generated in the browser
-- **Styling:** `static/style.css`
-
-Flask serves the compiled React app from `client/dist/`. The root npm package is an npm workspace containing `client`; install dependencies once from the project root. `server/` is a separate legacy Express backend and is not used by the Flask app.
-
-## Project Structure
+## Project layout
 
 ```text
 .
-├── app.py                  # Flask app, API routes, models, and SQLite setup
-├── requirements.txt        # Python dependencies
-├── client/
-│   ├── src/App.jsx         # React screens, game loop, levels, and interactions
-│   ├── src/gameAudio.js    # Browser-generated sound effects
-│   ├── src/main.jsx        # React entry point and shared stylesheet import
-│   ├── index.html          # Vite HTML entry point
-│   ├── vite.config.js      # Vite config and development API proxy
-│   └── dist/               # Generated build served by Flask
-├── static/style.css       # Shared responsive styles and animations
-├── instance/               # Local SQLite database
-├── server/                 # Legacy Express backend; not used by Flask
-├── package.json            # Root npm workspace and scripts
-├── package-lock.json       # Root workspace lockfile
-└── README.md
+├── backend/                 # Active Python API and its data/configuration
+│   ├── app.py               # Flask application, database models, and API routes
+│   ├── requirements.txt     # Python dependencies
+│   ├── level_config.json    # Campaign targets, difficulty, and level rewards
+│   ├── house_construction_steps.json # Ordered house tasks and costs
+│   ├── tests/               # Backend API tests
+├── frontend/                # Browser app and shared visual styles
+│   ├── client/              # React 19 and Vite workspace
+│   │   ├── src/App.jsx      # Screens, dashboard, authentication, and game flow
+│   │   ├── src/gameLogic.js # Reusable gameplay rules
+│   │   ├── src/gameAudio.js # Browser generated sound effects
+│   │   ├── src/components/  # Landing and 3D house scene components
+│   │   ├── public/          # Public static assets
+│   │   └── vite.config.js   # Dev server and Flask API proxy
+│   └── static/style.css     # Shared responsive styles and animations
+├── package.json             # Root scripts and npm workspace declaration
+├── package-lock.json        # Root npm dependency lockfile
+├── docs/                    # Project overview, setup, and API documentation
+├── vercel.json              # Vercel build and Python function configuration
+└── README.md                # This project and operating guide
 ```
+
+The root npm workspace is `frontend/client`. `backend/app.py` is the active backend.
+
+## What the project does
+
+- Lets visitors register or log in; a successful login or registration opens the dashboard.
+- Supports Classic and Arcade fruit slicing with mouse or touch, combos, score, lives, bombs, particles, and sound effects.
+- Saves player profiles, game history, statistics, level progress, and leaderboard results.
+- Provides a twenty level campaign. Each level has score and fruit targets, rising difficulty, retry support, and an explicit continue action.
+- Awards gems after the server validates a completed level. The wallet records earned and spent transactions.
+- Offers 100 sequential house construction tasks that use gems from the player's wallet.
+- Includes friend challenges, live game streaming, and a Three.js house scene.
+- Uses SQLite for local development. PostgreSQL is recommended for hosted deployments.
 
 ## Requirements
 
 - Python 3.10 or newer
 - Node.js and npm
 
-## Install and Run
+## Install and run locally
 
-From the project root, install the single npm workspace dependency tree and Python dependencies.
+From the repository root, install Python packages and JavaScript workspace dependencies.
 
 ### Windows PowerShell
 
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-npm.cmd install
-npm.cmd run dev
+pip install -r backend/requirements.txt
+npm install
+npm run dev
 ```
 
 ### macOS or Linux
@@ -83,64 +67,54 @@ npm.cmd run dev
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 npm install
 npm run dev
 ```
 
-The development command starts Flask and Vite together. Open [http://127.0.0.1:5173](http://127.0.0.1:5173) for the Vite development app. Vite proxies `/api` requests to Flask on port 5000.
+The development command starts Flask on port 5000 and Vite on port 5173. Open http://127.0.0.1:5173. Vite forwards `/api` requests to Flask. To start either process separately, use `npm run backend` or `npm run client` from the repository root.
 
-## Production Build and Flask
+## Build and serve the production frontend
 
-Build the React app from the project root:
+Build the React app from the repository root:
 
-```powershell
-npm.cmd run build
+```bash
+npm run build
 ```
 
-On macOS or Linux, use `npm run build`. This writes the generated app to `client/dist/`. Start Flask with `python app.py` (or `python3 app.py`) and open [http://127.0.0.1:5000](http://127.0.0.1:5000). Flask returns a setup message if the frontend has not been built yet.
+The build is written to `frontend/client/dist/`. Start Flask with `npm start` or `python -m backend.app`, then open http://127.0.0.1:5000. Flask serves the built frontend and the API from one origin. Build before starting Flask for production; the development workflow uses Vite instead.
 
-## Configuration
+## Configuration and data
 
-Flask uses SQLite by default for local development and creates its database tables at startup. Set a persistent PostgreSQL `DATABASE_URL` for deployment. Optional environment variables:
+Flask creates its database tables at startup. With no `DATABASE_URL`, local development uses SQLite. Set `JWT_SECRET_KEY` to a private random value for deployed use. `CORS_ALLOWED_ORIGINS` is a comma separated list used when the browser app and API have different origins. `VITE_API_URL` is optional and should normally remain empty for a same-origin deployment. `.env.example` shows backend variable names; do not commit real credentials or `.env` files.
 
-```text
-DATABASE_URL=sqlite:///slice_storm.db
-JWT_SECRET_KEY=Nothing
-PORT=5000
+For Vercel, configure `DATABASE_URL` to a persistent PostgreSQL database and `JWT_SECRET_KEY` in project settings, then redeploy. The root `vercel.json` builds the frontend and includes its output and backend JSON configuration with the Flask function. Local SQLite is suitable for development but should not be used as persistent storage on a serverless deployment.
+
+Campaign targets, score requirements, difficulty, and rewards are in `backend/level_config.json`. Construction task labels and gem costs are in `backend/house_construction_steps.json`. The backend validates level completion and reward amounts; the browser does not choose the gem award. Construction steps must be completed in order. Wallet history records transactions, and existing balances are retained during database setup/backfills.
+
+## API overview
+
+All API routes use the `/api` prefix. Authenticated routes expect `Authorization: Bearer <token>`.
+
+| Area | Routes | Purpose |
+| --- | --- | --- |
+| Health | `GET /api/health` | Backend and database health |
+| Authentication | `POST /api/auth/register`, `POST /api/auth/login`, `GET/PUT /api/auth/me` | Create account, start session, view or update profile |
+| Profile and wallet | `GET /api/profile`, `GET /api/wallet`, `POST /api/gifts/daily`, `POST /api/gifts/claim` | Player stats, gem balance, and gifts |
+| Campaign | `GET/PUT /api/progress`, `POST /api/progress/complete`, `POST /api/rewards/claim` | Load/save level progress, validate completion, claim gems |
+| Games | `POST /api/games/start`, `POST /api/games/complete`, `GET /api/games/history` | Track rounds and results |
+| Leaderboard | `GET /api/leaderboard`, `GET /api/leaderboard/me` | Global and personal score summaries |
+| House | `GET /api/house`, `POST /api/house/build`, `POST /api/house/purchase` | Inspect and purchase construction tasks |
+| Challenges | `GET/POST /api/challenges`, `POST /api/challenges/join` | List, create, or join a friend challenge |
+| Live play | `GET/POST /api/live/rooms`, room join/viewer/end/leave routes | Manage live rooms and streaming sessions |
+
+## Developer commands
+
+```bash
+npm run dev                  # Flask and Vite together
+npm run backend              # Flask only
+npm run client               # Vite only
+npm run build                # Production frontend build
+npm test --workspace=frontend/client # Frontend logic tests
+python -m unittest backend.tests.test_rewards_api # Backend API tests
 ```
-
-The built-in JWT secret is for local development only. Set a private `JWT_SECRET_KEY` before deployment.
-
-## Deploying on Vercel
-
-The root `app.py` serves the Flask API and the built React app. Vercel builds the frontend with `npm run build`; the Python runtime serves the Flask app. Local SQLite is not persistent on Vercel, so connect a hosted PostgreSQL database such as Neon and set these variables in the Vercel project settings:
-
-- `DATABASE_URL` — the PostgreSQL connection string from Neon
-- `JWT_SECRET_KEY` — a long, randomly generated secret
-
-The frontend calls the API on the same deployment by default. Leave `VITE_API_URL` unset unless the API is hosted separately. Never commit `.env` files or database credentials.
-
-## API Routes
-
-- `POST /api/auth/register` — create an account
-- `POST /api/auth/login` — log in and receive a JWT
-- `GET /api/auth/me` — retrieve the authenticated user
-- `POST /api/games/start` — create a game session
-- `POST /api/games/complete` — save a completed game result
-- `GET /api/games/history` — retrieve the authenticated user's game history
-- `GET /api/leaderboard` — retrieve top scores
-- `GET /api/leaderboard/me` — retrieve the authenticated user's leaderboard statistics
-- `GET /api/health` — backend health check
-
-## Recent Project Work
-
-- Replaced the unused legacy static frontend entry point with the React/Vite app served from `client/dist/`, and updated the project documentation to match.
-- Added responsive fruit-slicing visuals, corrected fruit positioning and slicing hit tests, and made swipe input work across animation redraws.
-- Added immediate fruit spawning at the start of a round.
-- Added a level target/progress display, escalating difficulty, a celebratory dancer and firework effects, and a Level 20 campaign cap.
-- Made level completion explicit and allowed retries to resume the current level and its slice-target progress.
-- Added a persistent emoji profile avatar picker and use of the avatar on the home screen and game HUD.
-- Added browser-compatible fruit ID generation, expired-token cleanup, and a favicon entry to avoid the related console errors.
-- Removed the long sad Game Over melody while keeping the dismissible sad-face emoji.
-- Refreshed the home hero, Play button, game HUD, level progress bar, fruit effects, and responsive styling.

@@ -1,0 +1,182 @@
+[
+  {
+    "level": 1,
+    "targetScore": 100,
+    "targetFruits": 5,
+    "speedMultiplier": 1,
+    "spawnIntervalMs": 930,
+    "bombChance": 0.14,
+    "gemReward": 50
+  },
+  {
+    "level": 2,
+    "targetScore": 175,
+    "targetFruits": 7,
+    "speedMultiplier": 1.08,
+    "spawnIntervalMs": 875,
+    "bombChance": 0.16,
+    "gemReward": 75
+  },
+  {
+    "level": 3,
+    "targetScore": 250,
+    "targetFruits": 9,
+    "speedMultiplier": 1.16,
+    "spawnIntervalMs": 820,
+    "bombChance": 0.18,
+    "gemReward": 100
+  },
+  {
+    "level": 4,
+    "targetScore": 325,
+    "targetFruits": 11,
+    "speedMultiplier": 1.24,
+    "spawnIntervalMs": 765,
+    "bombChance": 0.2,
+    "gemReward": 150
+  },
+  {
+    "level": 5,
+    "targetScore": 400,
+    "targetFruits": 13,
+    "speedMultiplier": 1.32,
+    "spawnIntervalMs": 710,
+    "bombChance": 0.22,
+    "gemReward": 200
+  },
+  {
+    "level": 6,
+    "targetScore": 475,
+    "targetFruits": 15,
+    "speedMultiplier": 1.4,
+    "spawnIntervalMs": 655,
+    "bombChance": 0.24,
+    "gemReward": 250
+  },
+  {
+    "level": 7,
+    "targetScore": 550,
+    "targetFruits": 17,
+    "speedMultiplier": 1.48,
+    "spawnIntervalMs": 600,
+    "bombChance": 0.26,
+    "gemReward": 300
+  },
+  {
+    "level": 8,
+    "targetScore": 625,
+    "targetFruits": 19,
+    "speedMultiplier": 1.56,
+    "spawnIntervalMs": 545,
+    "bombChance": 0.28,
+    "gemReward": 350
+  },
+  {
+    "level": 9,
+    "targetScore": 700,
+    "targetFruits": 21,
+    "speedMultiplier": 1.64,
+    "spawnIntervalMs": 490,
+    "bombChance": 0.3,
+    "gemReward": 400
+  },
+  {
+    "level": 10,
+    "targetScore": 775,
+    "targetFruits": 23,
+    "speedMultiplier": 1.72,
+    "spawnIntervalMs": 435,
+    "bombChance": 0.32,
+    "gemReward": 450
+  },
+  {
+    "level": 11,
+    "targetScore": 850,
+    "targetFruits": 25,
+    "speedMultiplier": 1.8,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.34,
+    "gemReward": 500
+  },
+  {
+    "level": 12,
+    "targetScore": 925,
+    "targetFruits": 27,
+    "speedMultiplier": 1.88,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.36,
+    "gemReward": 550
+  },
+  {
+    "level": 13,
+    "targetScore": 1000,
+    "targetFruits": 29,
+    "speedMultiplier": 1.96,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.38,
+    "gemReward": 600
+  },
+  {
+    "level": 14,
+    "targetScore": 1075,
+    "targetFruits": 31,
+    "speedMultiplier": 2.04,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.4,
+    "gemReward": 650
+  },
+  {
+    "level": 15,
+    "targetScore": 1150,
+    "targetFruits": 33,
+    "speedMultiplier": 2.12,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.42,
+    "gemReward": 700
+  },
+  {
+    "level": 16,
+    "targetScore": 1225,
+    "targetFruits": 35,
+    "speedMultiplier": 2.2,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.44,
+    "gemReward": 750
+  },
+  {
+    "level": 17,
+    "targetScore": 1300,
+    "targetFruits": 37,
+    "speedMultiplier": 2.28,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.46,
+    "gemReward": 800
+  },
+  {
+    "level": 18,
+    "targetScore": 1375,
+    "targetFruits": 39,
+    "speedMultiplier": 2.36,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.48,
+    "gemReward": 850
+  },
+  {
+    "level": 19,
+    "targetScore": 1450,
+    "targetFruits": 41,
+    "speedMultiplier": 2.44,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.5,
+    "gemReward": 900
+  },
+  {
+    "level": 20,
+    "targetScore": 1525,
+    "targetFruits": 43,
+    "speedMultiplier": 2.52,
+    "spawnIntervalMs": 420,
+    "bombChance": 0.52,
+    "gemReward": 950
+  }
+]

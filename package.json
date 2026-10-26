@@ -2,14 +2,14 @@
   "name": "slice-storm",
   "private": true,
   "workspaces": [
-    "client"
+    "frontend/client"
   ],
   "scripts": {
     "dev": "concurrently \"npm run backend\" \"npm run client\"",
-    "backend": "python app.py",
-    "client": "npm run dev --workspace=client -- --host 0.0.0.0",
-    "build": "npm run build --workspace=client",
-    "start": "python app.py"
+    "backend": "python -m backend.app",
+    "client": "npm run dev --workspace=frontend/client -- --host 0.0.0.0",
+    "build": "npm run build --workspace=frontend/client",
+    "start": "python -m backend.app"
   },
   "devDependencies": {
     "concurrently": "^9.0.1"

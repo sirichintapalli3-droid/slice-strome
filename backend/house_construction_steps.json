@@ -1,0 +1,702 @@
+[
+  {
+    "step": 1,
+    "name": "Survey the empty plot",
+    "description": "Mark the rectangular residential plot, street edge, north direction and building setbacks.",
+    "cost": 20,
+    "phase": "Site preparation"
+  },
+  {
+    "step": 2,
+    "name": "Remove debris and scrub",
+    "description": "Clear loose rubble, weeds and construction waste from the building footprint.",
+    "cost": 20,
+    "phase": "Site preparation"
+  },
+  {
+    "step": 3,
+    "name": "Level and compact the soil",
+    "description": "Grade the soil and compact the ground ready for the foundations.",
+    "cost": 20,
+    "phase": "Site preparation"
+  },
+  {
+    "step": 4,
+    "name": "Excavate foundation trenches",
+    "description": "Excavate stepped trenches beneath the load-bearing walls and column grid.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 5,
+    "name": "Lay the PCC blinding course",
+    "description": "Place a level plain-concrete bed at the bottom of each foundation trench.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 6,
+    "name": "Fix footing reinforcement",
+    "description": "Position tied steel reinforcement cages with concrete cover spacers.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 7,
+    "name": "Cast reinforced concrete footings",
+    "description": "Pour and cure the stepped reinforced footings below every column.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 8,
+    "name": "Build the plinth beam",
+    "description": "Connect the footings with a continuous reinforced-concrete plinth beam.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 9,
+    "name": "Backfill and compact inside plinth",
+    "description": "Return selected soil in compacted layers inside the completed plinth.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 10,
+    "name": "Cast the ground floor base",
+    "description": "Lay damp-proofing and a compacted concrete ground-floor base slab.",
+    "cost": 20,
+    "phase": "Foundation"
+  },
+  {
+    "step": 11,
+    "name": "Set ground-floor column starters",
+    "description": "Anchor vertical steel starter bars at each structural column location.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 12,
+    "name": "Erect ground-floor column forms",
+    "description": "Set accurately braced shuttering around the reinforced column cages.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 13,
+    "name": "Cast ground-floor columns",
+    "description": "Pour concrete columns and reveal the first storey structural frame.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 14,
+    "name": "Form ground-floor beams",
+    "description": "Install beam reinforcement and shuttering between the concrete columns.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 15,
+    "name": "Cast ground-floor ring beams",
+    "description": "Pour the beams that tie the ground-floor frame together.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 16,
+    "name": "Install slab centering",
+    "description": "Brace slab formwork at the correct level over the ground floor.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 17,
+    "name": "Place upper slab reinforcement",
+    "description": "Tie the two-way steel mesh and extra bars at beam supports.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 18,
+    "name": "Cast the first-floor slab",
+    "description": "Pour the reinforced-concrete slab that forms the first-floor ceiling.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 19,
+    "name": "Cure the first-floor slab",
+    "description": "Keep the slab supported and curing before loading the next storey.",
+    "cost": 20,
+    "phase": "Ground floor frame"
+  },
+  {
+    "step": 20,
+    "name": "Build ground-floor brick walls",
+    "description": "Lay the exterior brick courses around the ground-floor room plan.",
+    "cost": 20,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 21,
+    "name": "Form the entry and room openings",
+    "description": "Set lintels and accurate openings for the front door and internal doors.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 22,
+    "name": "Build the living-room wall returns",
+    "description": "Complete the front living-room masonry and its projecting facade returns.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 23,
+    "name": "Build kitchen and utility walls",
+    "description": "Lay the kitchen perimeter and a ventilated utility-room partition.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 24,
+    "name": "Build ground-floor partitions",
+    "description": "Shape the bedroom, stair hall and service-room interior partitions.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 25,
+    "name": "Form the reinforced staircase",
+    "description": "Cast the dog-leg concrete stair flights and intermediate landing.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 26,
+    "name": "Fix upper-storey column reinforcement",
+    "description": "Tie the upper column cages into their starter bars above the first-floor slab.",
+    "cost": 50,
+    "phase": "Upper floor frame"
+  },
+  {
+    "step": 27,
+    "name": "Set upper-storey column formwork",
+    "description": "Brace the upper column shutters plumb and aligned with the frame.",
+    "cost": 50,
+    "phase": "Upper floor frame"
+  },
+  {
+    "step": 28,
+    "name": "Cast upper-storey columns",
+    "description": "Pour the second-storey columns above the ground-floor structure.",
+    "cost": 50,
+    "phase": "Upper floor frame"
+  },
+  {
+    "step": 29,
+    "name": "Form upper-storey beams",
+    "description": "Install reinforced beam cages and shuttering around the upper perimeter.",
+    "cost": 50,
+    "phase": "Upper floor frame"
+  },
+  {
+    "step": 30,
+    "name": "Cast the roof-level beams",
+    "description": "Connect the upper columns with the reinforced roof ring beam.",
+    "cost": 50,
+    "phase": "Upper floor frame"
+  },
+  {
+    "step": 31,
+    "name": "Lay roof slab centering",
+    "description": "Brace and level the roof slab formwork above the upper storey.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 32,
+    "name": "Tie roof slab steel",
+    "description": "Place roof reinforcement and anchorage bars for the parapet.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 33,
+    "name": "Cast the reinforced roof slab",
+    "description": "Pour the flat concrete terrace roof of the two-storey home.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 34,
+    "name": "Build the upper-floor brick walls",
+    "description": "Lay exterior masonry around the bedrooms and upper lounge.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 35,
+    "name": "Build upper-floor room partitions",
+    "description": "Form bedroom, bathroom and landing partitions to the floor plan.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 36,
+    "name": "Install upper lintels and sills",
+    "description": "Fit reinforced lintels and projecting masonry sills over openings.",
+    "cost": 50,
+    "phase": "Masonry shell"
+  },
+  {
+    "step": 37,
+    "name": "Build the terrace parapet",
+    "description": "Raise the roof-edge parapet wall and define the terrace boundary.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 38,
+    "name": "Install roof rainwater outlets",
+    "description": "Set terrace outlets and downpipe sleeves to drain monsoon rain.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 39,
+    "name": "Apply terrace waterproofing",
+    "description": "Seal the roof slab and turn waterproofing up at parapet joints.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 40,
+    "name": "Add roof heat-insulation screed",
+    "description": "Lay sloped insulating screed that protects rooms from roof heat.",
+    "cost": 50,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 41,
+    "name": "Set aluminium window frames",
+    "description": "Anchor powder-coated aluminium frames in the ground-floor openings.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 42,
+    "name": "Glaze ground-floor windows",
+    "description": "Fit clear insulated glazing with realistic reflective glass panes.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 43,
+    "name": "Fit the main teak entry door",
+    "description": "Hang the broad timber entry door with frame, threshold and hardware.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 44,
+    "name": "Fit internal door frames",
+    "description": "Install room and bathroom door frames through both storeys.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 45,
+    "name": "Run electrical conduits",
+    "description": "Route concealed conduits, switch boxes and light circuits through rooms.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 46,
+    "name": "Install plumbing and drainage",
+    "description": "Route water supply, soil stacks and floor-drain connections to wet rooms.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 47,
+    "name": "Add bathroom waterproofing",
+    "description": "Seal bathroom floors and shower walls before tile installation.",
+    "cost": 100,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 48,
+    "name": "Plaster ground-floor interiors",
+    "description": "Apply smooth cement plaster to ground-floor room walls and ceilings.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 49,
+    "name": "Plaster upper-floor interiors",
+    "description": "Level the upper rooms, landing and stairwell with interior plaster.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 50,
+    "name": "Screed the ground-floor rooms",
+    "description": "Level the living, kitchen and bedroom floors for final finishes.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 51,
+    "name": "Lay ground-floor stone flooring",
+    "description": "Install large-format warm stone tiles through the living spaces.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 52,
+    "name": "Tile the upper-floor bedrooms",
+    "description": "Lay timber-look porcelain flooring in the bedrooms and upper lounge.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 53,
+    "name": "Tile bathroom floors and walls",
+    "description": "Set durable stone tile and a contrasting shower-wall finish.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 54,
+    "name": "Grout and seal floor finishes",
+    "description": "Grout tile joints and seal exposed stone surfaces across the house.",
+    "cost": 100,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 55,
+    "name": "Apply exterior base plaster",
+    "description": "Cover exposed exterior brickwork with an even cement render coat.",
+    "cost": 100,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 56,
+    "name": "Shape facade bands and reveals",
+    "description": "Form recessed window reveals and clean horizontal facade bands.",
+    "cost": 100,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 57,
+    "name": "Install facade stone cladding",
+    "description": "Apply textured local stone panels to the entrance feature wall.",
+    "cost": 100,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 58,
+    "name": "Paint the exterior warm ivory",
+    "description": "Prime and paint the rendered walls in a contemporary ivory tone.",
+    "cost": 100,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 59,
+    "name": "Add charcoal facade accents",
+    "description": "Paint balcony edges and architectural bands in deep charcoal grey.",
+    "cost": 100,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 60,
+    "name": "Install the first-floor balcony slab",
+    "description": "Extend a reinforced balcony cantilever from the upper living room.",
+    "cost": 100,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 61,
+    "name": "Fit balcony glass balustrade",
+    "description": "Fix tempered-glass panels and stainless steel handrail to the balcony.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 62,
+    "name": "Set upper-floor aluminium frames",
+    "description": "Install matching window frames at the second-storey openings.",
+    "cost": 150,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 63,
+    "name": "Glaze the upper-floor windows",
+    "description": "Fit reflective glazing to bedrooms and the balcony door.",
+    "cost": 150,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 64,
+    "name": "Hang upper-floor doors",
+    "description": "Install finished timber doors for bedrooms and bathrooms upstairs.",
+    "cost": 150,
+    "phase": "Openings and services"
+  },
+  {
+    "step": 65,
+    "name": "Build timber stair treads",
+    "description": "Finish the concrete stair with warm timber treads and nosings.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 66,
+    "name": "Install the stair handrail",
+    "description": "Anchor a slim timber and dark-metal balustrade along the stair.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 67,
+    "name": "Fit kitchen worktops",
+    "description": "Install a dark granite worktop over the lower kitchen cabinets.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 68,
+    "name": "Install built-in kitchen cabinets",
+    "description": "Fit warm wood lower cabinets and light upper cabinets to the kitchen.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 69,
+    "name": "Fit bathroom sanitaryware",
+    "description": "Install toilets, basins, showers and chrome mixer fittings.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 70,
+    "name": "Fit electrical switches and sockets",
+    "description": "Finish outlet plates, switchgear and safe distribution-board details.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 71,
+    "name": "Install recessed ceiling lights",
+    "description": "Fit warm recessed downlights in the ceiling soffits and rooms.",
+    "cost": 150,
+    "phase": "Interior finish"
+  },
+  {
+    "step": 72,
+    "name": "Install facade wall lights",
+    "description": "Mount weatherproof up-down lights on the front facade columns.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 73,
+    "name": "Fit balcony soffit lighting",
+    "description": "Add discreet warm lighting beneath the first-floor balcony.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 74,
+    "name": "Install exterior rainwater pipes",
+    "description": "Connect terrace outlets to finished downpipes on the side walls.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 75,
+    "name": "Fit AC ledges and service screens",
+    "description": "Add ventilated service ledges that conceal exterior equipment.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 76,
+    "name": "Install window shades",
+    "description": "Add slim exterior sunshades above exposed south-facing windows.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 77,
+    "name": "Finish the terrace walking surface",
+    "description": "Lay non-slip terrace pavers around the roof access stairhead.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 78,
+    "name": "Add terrace access stairhead",
+    "description": "Build and finish the small stair enclosure opening onto the terrace.",
+    "cost": 150,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 79,
+    "name": "Install terrace metal safety rail",
+    "description": "Fit a dark powder-coated rail along the safe terrace edge.",
+    "cost": 150,
+    "phase": "Roof structure"
+  },
+  {
+    "step": 80,
+    "name": "Complete the facade reveal details",
+    "description": "Seal joints, clean glazing and finish visible exterior edges and trims.",
+    "cost": 150,
+    "phase": "Exterior finish"
+  },
+  {
+    "step": 81,
+    "name": "Cast the front boundary wall",
+    "description": "Build a rendered compound wall along the street and plot sides.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 82,
+    "name": "Fit the sliding main gate",
+    "description": "Install a contemporary slatted metal vehicle gate at the entrance.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 83,
+    "name": "Lay the driveway sub-base",
+    "description": "Compact aggregate from the street gate to the covered entry.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 84,
+    "name": "Pave the stone driveway",
+    "description": "Lay patterned charcoal and pale stone pavers across the driveway.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 85,
+    "name": "Build the pedestrian entry path",
+    "description": "Pave a separate walkway with broad natural-stone stepping slabs.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 86,
+    "name": "Prepare the garden planting beds",
+    "description": "Shape planting beds along the boundary and front facade.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 87,
+    "name": "Lay the front lawn",
+    "description": "Install a neat green lawn and define its edges with stone borders.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 88,
+    "name": "Plant Indian shade trees",
+    "description": "Plant young frangipani and native shade trees within the front garden.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 89,
+    "name": "Add shrubs and tropical planting",
+    "description": "Fill garden beds with layered shrubs, grasses and flowering plants.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 90,
+    "name": "Install gate and garden lights",
+    "description": "Add warm bollard lights along the entry path and boundary gate.",
+    "cost": 175,
+    "phase": "Plot and landscape"
+  },
+  {
+    "step": 91,
+    "name": "Furnish the living room",
+    "description": "Place a modern sofa, timber coffee table and neutral woven rug.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 92,
+    "name": "Add the living-room media wall",
+    "description": "Install a low media console, display niches and wall-mounted screen.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 93,
+    "name": "Furnish the ground-floor bedroom",
+    "description": "Place a double bed, side tables and wardrobe in the guest bedroom.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 94,
+    "name": "Furnish the upper master bedroom",
+    "description": "Add a king bed, bedside lamps, soft linen and a fitted wardrobe.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 95,
+    "name": "Fit the dining room",
+    "description": "Set a solid-wood dining table with chairs near the kitchen.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 96,
+    "name": "Complete kitchen appliances",
+    "description": "Install the refrigerator, cooktop, oven and extractor hood.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 97,
+    "name": "Add curtains and interior decor",
+    "description": "Hang linen curtains and place restrained art and decorative objects.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 98,
+    "name": "Furnish the balcony",
+    "description": "Place outdoor chairs, a small table and planters on the balcony.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 99,
+    "name": "Complete final cleaning and inspection",
+    "description": "Clean glazing, polish floors and inspect the finished rooms and site.",
+    "cost": 175,
+    "phase": "Furnishing"
+  },
+  {
+    "step": 100,
+    "name": "Open the completed residence",
+    "description": "Finish the handover details and reveal the fully furnished modern Indian home.",
+    "cost": 275,
+    "phase": "Handover"
+  }
+]
